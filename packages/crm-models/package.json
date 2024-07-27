@@ -5,7 +5,7 @@
     "db:generate": "yarn pnpify prisma generate",
     "db:create-migration": "yarn pnpify prisma migrate dev --name",
     "db:deploy-migrations": "prisma migrate deploy",
-    "format": "prettier ./src --write"
+    "format": "prettier ./src --write && yarn prisma format"
   },
   "main": "./dist/index.js",
   "devDependencies": {
