@@ -135,7 +135,9 @@ exports.Prisma.ConstituentAddressScalarFieldEnum = {
   city: 'city',
   state: 'state',
   zip: 'zip',
-  constituentId: 'constituentId'
+  constituentId: 'constituentId',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
 };
 
 exports.Prisma.SortOrder = {

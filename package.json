@@ -1,11 +1,12 @@
 {
-  "name": "indigov-take-home",
+  "name": "trey-fenner-indigov-take-home",
   "workspaces": [
     "apps/*",
     "packages/*"
   ],
   "packageManager": "yarn@4.3.1",
   "devDependencies": {
+    "prettier": "^3.3.3",
     "typescript": "^5.5.4"
   }
 }

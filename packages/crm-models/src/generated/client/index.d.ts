@@ -1958,6 +1958,8 @@ export namespace Prisma {
     state: string | null
     zip: string | null
     constituentId: string | null
+    createdAt: Date | null
+    updatedAt: Date | null
   }
 
   export type ConstituentAddressMaxAggregateOutputType = {
@@ -1969,6 +1971,8 @@ export namespace Prisma {
     state: string | null
     zip: string | null
     constituentId: string | null
+    createdAt: Date | null
+    updatedAt: Date | null
   }
 
   export type ConstituentAddressCountAggregateOutputType = {
@@ -1980,6 +1984,8 @@ export namespace Prisma {
     state: number
     zip: number
     constituentId: number
+    createdAt: number
+    updatedAt: number
     _all: number
   }
 
@@ -1993,6 +1999,8 @@ export namespace Prisma {
     state?: true
     zip?: true
     constituentId?: true
+    createdAt?: true
+    updatedAt?: true
   }
 
   export type ConstituentAddressMaxAggregateInputType = {
@@ -2004,6 +2012,8 @@ export namespace Prisma {
     state?: true
     zip?: true
     constituentId?: true
+    createdAt?: true
+    updatedAt?: true
   }
 
   export type ConstituentAddressCountAggregateInputType = {
@@ -2015,6 +2025,8 @@ export namespace Prisma {
     state?: true
     zip?: true
     constituentId?: true
+    createdAt?: true
+    updatedAt?: true
     _all?: true
   }
 
@@ -2099,6 +2111,8 @@ export namespace Prisma {
     state: string
     zip: string
     constituentId: string
+    createdAt: Date
+    updatedAt: Date
     _count: ConstituentAddressCountAggregateOutputType | null
     _min: ConstituentAddressMinAggregateOutputType | null
     _max: ConstituentAddressMaxAggregateOutputType | null
@@ -2127,6 +2141,8 @@ export namespace Prisma {
     state?: boolean
     zip?: boolean
     constituentId?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
     Constituent?: boolean | ConstituentDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["constituentAddress"]>
 
@@ -2139,6 +2155,8 @@ export namespace Prisma {
     state?: boolean
     zip?: boolean
     constituentId?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
     Constituent?: boolean | ConstituentDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["constituentAddress"]>
 
@@ -2151,6 +2169,8 @@ export namespace Prisma {
     state?: boolean
     zip?: boolean
     constituentId?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
   }
 
   export type ConstituentAddressInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -2174,6 +2194,8 @@ export namespace Prisma {
       state: string
       zip: string
       constituentId: string
+      createdAt: Date
+      updatedAt: Date
     }, ExtArgs["result"]["constituentAddress"]>
     composites: {}
   }
@@ -2576,6 +2598,8 @@ export namespace Prisma {
     readonly state: FieldRef<"ConstituentAddress", 'String'>
     readonly zip: FieldRef<"ConstituentAddress", 'String'>
     readonly constituentId: FieldRef<"ConstituentAddress", 'String'>
+    readonly createdAt: FieldRef<"ConstituentAddress", 'DateTime'>
+    readonly updatedAt: FieldRef<"ConstituentAddress", 'DateTime'>
   }
     
 
@@ -2939,7 +2963,9 @@ export namespace Prisma {
     city: 'city',
     state: 'state',
     zip: 'zip',
-    constituentId: 'constituentId'
+    constituentId: 'constituentId',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
   };
 
   export type ConstituentAddressScalarFieldEnum = (typeof ConstituentAddressScalarFieldEnum)[keyof typeof ConstituentAddressScalarFieldEnum]
@@ -3079,6 +3105,8 @@ export namespace Prisma {
     state?: StringFilter<"ConstituentAddress"> | string
     zip?: StringFilter<"ConstituentAddress"> | string
     constituentId?: StringFilter<"ConstituentAddress"> | string
+    createdAt?: DateTimeFilter<"ConstituentAddress"> | Date | string
+    updatedAt?: DateTimeFilter<"ConstituentAddress"> | Date | string
     Constituent?: XOR<ConstituentRelationFilter, ConstituentWhereInput>
   }
 
@@ -3091,6 +3119,8 @@ export namespace Prisma {
     state?: SortOrder
     zip?: SortOrder
     constituentId?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
     Constituent?: ConstituentOrderByWithRelationInput
   }
 
@@ -3106,6 +3136,8 @@ export namespace Prisma {
     city?: StringFilter<"ConstituentAddress"> | string
     state?: StringFilter<"ConstituentAddress"> | string
     zip?: StringFilter<"ConstituentAddress"> | string
+    createdAt?: DateTimeFilter<"ConstituentAddress"> | Date | string
+    updatedAt?: DateTimeFilter<"ConstituentAddress"> | Date | string
     Constituent?: XOR<ConstituentRelationFilter, ConstituentWhereInput>
   }, "id" | "constituentId">
 
@@ -3118,6 +3150,8 @@ export namespace Prisma {
     state?: SortOrder
     zip?: SortOrder
     constituentId?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
     _count?: ConstituentAddressCountOrderByAggregateInput
     _max?: ConstituentAddressMaxOrderByAggregateInput
     _min?: ConstituentAddressMinOrderByAggregateInput
@@ -3135,6 +3169,8 @@ export namespace Prisma {
     state?: StringWithAggregatesFilter<"ConstituentAddress"> | string
     zip?: StringWithAggregatesFilter<"ConstituentAddress"> | string
     constituentId?: StringWithAggregatesFilter<"ConstituentAddress"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"ConstituentAddress"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"ConstituentAddress"> | Date | string
   }
 
   export type ConstituentCreateInput = {
@@ -3226,6 +3262,8 @@ export namespace Prisma {
     city: string
     state: string
     zip: string
+    createdAt?: Date | string
+    updatedAt?: Date | string
     Constituent: ConstituentCreateNestedOneWithoutConstituentAddressInput
   }
 
@@ -3238,6 +3276,8 @@ export namespace Prisma {
     state: string
     zip: string
     constituentId: string
+    createdAt?: Date | string
+    updatedAt?: Date | string
   }
 
   export type ConstituentAddressUpdateInput = {
@@ -3248,6 +3288,8 @@ export namespace Prisma {
     city?: StringFieldUpdateOperationsInput | string
     state?: StringFieldUpdateOperationsInput | string
     zip?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     Constituent?: ConstituentUpdateOneRequiredWithoutConstituentAddressNestedInput
   }
 
@@ -3260,6 +3302,8 @@ export namespace Prisma {
     state?: StringFieldUpdateOperationsInput | string
     zip?: StringFieldUpdateOperationsInput | string
     constituentId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type ConstituentAddressCreateManyInput = {
@@ -3271,6 +3315,8 @@ export namespace Prisma {
     state: string
     zip: string
     constituentId: string
+    createdAt?: Date | string
+    updatedAt?: Date | string
   }
 
   export type ConstituentAddressUpdateManyMutationInput = {
@@ -3281,6 +3327,8 @@ export namespace Prisma {
     city?: StringFieldUpdateOperationsInput | string
     state?: StringFieldUpdateOperationsInput | string
     zip?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type ConstituentAddressUncheckedUpdateManyInput = {
@@ -3292,6 +3340,8 @@ export namespace Prisma {
     state?: StringFieldUpdateOperationsInput | string
     zip?: StringFieldUpdateOperationsInput | string
     constituentId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type StringFilter<$PrismaModel = never> = {
@@ -3451,6 +3501,8 @@ export namespace Prisma {
     state?: SortOrder
     zip?: SortOrder
     constituentId?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
   }
 
   export type ConstituentAddressMaxOrderByAggregateInput = {
@@ -3462,6 +3514,8 @@ export namespace Prisma {
     state?: SortOrder
     zip?: SortOrder
     constituentId?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
   }
 
   export type ConstituentAddressMinOrderByAggregateInput = {
@@ -3473,6 +3527,8 @@ export namespace Prisma {
     state?: SortOrder
     zip?: SortOrder
     constituentId?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
   }
 
   export type ConstituentAddressCreateNestedOneWithoutConstituentInput = {
@@ -3667,6 +3723,8 @@ export namespace Prisma {
     city: string
     state: string
     zip: string
+    createdAt?: Date | string
+    updatedAt?: Date | string
   }
 
   export type ConstituentAddressUncheckedCreateWithoutConstituentInput = {
@@ -3677,6 +3735,8 @@ export namespace Prisma {
     city: string
     state: string
     zip: string
+    createdAt?: Date | string
+    updatedAt?: Date | string
   }
 
   export type ConstituentAddressCreateOrConnectWithoutConstituentInput = {
@@ -3703,6 +3763,8 @@ export namespace Prisma {
     city?: StringFieldUpdateOperationsInput | string
     state?: StringFieldUpdateOperationsInput | string
     zip?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type ConstituentAddressUncheckedUpdateWithoutConstituentInput = {
@@ -3713,6 +3775,8 @@ export namespace Prisma {
     city?: StringFieldUpdateOperationsInput | string
     state?: StringFieldUpdateOperationsInput | string
     zip?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type ConstituentCreateWithoutConstituentAddressInput = {

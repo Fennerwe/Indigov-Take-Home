@@ -19,8 +19,8 @@ model Constituent {
   phone              String?
   constituentAddress ConstituentAddress?
   subscribed         Boolean             @default(true)
-  createdAt          DateTime            @default(now())
-  updatedAt          DateTime            @default(now())
+  createdAt          DateTime            @default(now()) @map("created_at")
+  updatedAt          DateTime            @default(now()) @map("updated_at")
 
   @@map("constituent")
 }
@@ -35,6 +35,8 @@ model ConstituentAddress {
   zip           String
   constituentId String      @unique
   Constituent   Constituent @relation(fields: [constituentId], references: [id])
+  createdAt     DateTime    @default(now()) @map("created_at")
+  updatedAt     DateTime    @default(now()) @map("updated_at")
 
   @@map("constituent_address")
 }

@@ -1,7 +1,7 @@
 {
-  "name": "crm-models",
+  "name": "@fennerwe-indigov/crm-models",
   "scripts": {
-    "build": "yarn generate && tsc",
+    "build": "yarn db:generate && tsc",
     "db:generate": "yarn pnpify prisma generate",
     "db:create-migration": "yarn pnpify prisma migrate dev --name",
     "db:deploy-migrations": "prisma migrate deploy",
