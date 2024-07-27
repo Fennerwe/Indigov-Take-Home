@@ -1,17 +1,24 @@
 {
   "name": "crm-models",
-  "packageManager": "yarn@4.3.1",
+  "scripts": {
+    "build": "yarn generate && tsc",
+    "generate": "yarn pnpify prisma generate",
+    "migrate": "prisma migrate dev --name"
+  },
   "devDependencies": {
     "@eslint/js": "^9.8.0",
     "@types/eslint": "^9",
     "@types/node": "^20.14.12",
+    "@yarnpkg/pnpify": "^4.1.0",
     "eslint": "9.x",
     "globals": "^15.8.0",
+    "prisma": "5.17.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4",
     "typescript-eslint": "^7.17.0"
   },
+  "packageManager": "yarn@4.3.1",
   "dependencies": {
-    "prisma": "^5.17.0"
+    "@prisma/client": "5.17.0"
   }
 }
