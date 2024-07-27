@@ -2,6 +2,10 @@
   "name": "crm-api",
   "packageManager": "yarn@4.3.1",
   "devDependencies": {
-    "typescript": "^5.5.4"
+    "@types/eslint": "^9",
+    "eslint": "9.x",
+    "globals": "^15.8.0",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^7.17.0"
   }
 }

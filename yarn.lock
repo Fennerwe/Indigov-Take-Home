@@ -526,7 +526,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "crm-api-sdk@workspace:packages/crm-api-sdk"
   dependencies:
+    "@types/eslint": "npm:^9"
+    eslint: "npm:9.x"
+    globals: "npm:^15.8.0"
     typescript: "npm:^5.5.4"
+    typescript-eslint: "npm:^7.17.0"
   languageName: unknown
   linkType: soft
 
@@ -534,7 +538,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "crm-api@workspace:apps/crm-api"
   dependencies:
+    "@types/eslint": "npm:^9"
+    eslint: "npm:9.x"
+    globals: "npm:^15.8.0"
     typescript: "npm:^5.5.4"
+    typescript-eslint: "npm:^7.17.0"
   languageName: unknown
   linkType: soft
 
