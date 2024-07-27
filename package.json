@@ -1,0 +1,8 @@
+{
+  "name": "indigov-take-home",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "packageManager": "yarn@4.3.1"
+}
