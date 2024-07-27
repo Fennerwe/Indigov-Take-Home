@@ -121,7 +121,10 @@ exports.Prisma.ConstituentScalarFieldEnum = {
   firstName: 'firstName',
   lastName: 'lastName',
   email: 'email',
-  phone: 'phone'
+  phone: 'phone',
+  subscribed: 'subscribed',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
 };
 
 exports.Prisma.ConstituentAddressScalarFieldEnum = {

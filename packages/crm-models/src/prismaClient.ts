@@ -1,3 +1,3 @@
-import { PrismaClient } from './generated/client'
+import { PrismaClient, Constituent } from './generated/client'
 
 export const dbClient = new PrismaClient()

@@ -980,6 +980,9 @@ export namespace Prisma {
     lastName: string | null
     email: string | null
     phone: string | null
+    subscribed: boolean | null
+    createdAt: Date | null
+    updatedAt: Date | null
   }
 
   export type ConstituentMaxAggregateOutputType = {
@@ -988,6 +991,9 @@ export namespace Prisma {
     lastName: string | null
     email: string | null
     phone: string | null
+    subscribed: boolean | null
+    createdAt: Date | null
+    updatedAt: Date | null
   }
 
   export type ConstituentCountAggregateOutputType = {
@@ -996,6 +1002,9 @@ export namespace Prisma {
     lastName: number
     email: number
     phone: number
+    subscribed: number
+    createdAt: number
+    updatedAt: number
     _all: number
   }
 
@@ -1006,6 +1015,9 @@ export namespace Prisma {
     lastName?: true
     email?: true
     phone?: true
+    subscribed?: true
+    createdAt?: true
+    updatedAt?: true
   }
 
   export type ConstituentMaxAggregateInputType = {
@@ -1014,6 +1026,9 @@ export namespace Prisma {
     lastName?: true
     email?: true
     phone?: true
+    subscribed?: true
+    createdAt?: true
+    updatedAt?: true
   }
 
   export type ConstituentCountAggregateInputType = {
@@ -1022,6 +1037,9 @@ export namespace Prisma {
     lastName?: true
     email?: true
     phone?: true
+    subscribed?: true
+    createdAt?: true
+    updatedAt?: true
     _all?: true
   }
 
@@ -1103,6 +1121,9 @@ export namespace Prisma {
     lastName: string
     email: string
     phone: string | null
+    subscribed: boolean
+    createdAt: Date
+    updatedAt: Date
     _count: ConstituentCountAggregateOutputType | null
     _min: ConstituentMinAggregateOutputType | null
     _max: ConstituentMaxAggregateOutputType | null
@@ -1128,6 +1149,9 @@ export namespace Prisma {
     lastName?: boolean
     email?: boolean
     phone?: boolean
+    subscribed?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
     constituentAddress?: boolean | Constituent$constituentAddressArgs<ExtArgs>
   }, ExtArgs["result"]["constituent"]>
 
@@ -1137,6 +1161,9 @@ export namespace Prisma {
     lastName?: boolean
     email?: boolean
     phone?: boolean
+    subscribed?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
   }, ExtArgs["result"]["constituent"]>
 
   export type ConstituentSelectScalar = {
@@ -1145,6 +1172,9 @@ export namespace Prisma {
     lastName?: boolean
     email?: boolean
     phone?: boolean
+    subscribed?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
   }
 
   export type ConstituentInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -1163,6 +1193,9 @@ export namespace Prisma {
       lastName: string
       email: string
       phone: string | null
+      subscribed: boolean
+      createdAt: Date
+      updatedAt: Date
     }, ExtArgs["result"]["constituent"]>
     composites: {}
   }
@@ -1562,6 +1595,9 @@ export namespace Prisma {
     readonly lastName: FieldRef<"Constituent", 'String'>
     readonly email: FieldRef<"Constituent", 'String'>
     readonly phone: FieldRef<"Constituent", 'String'>
+    readonly subscribed: FieldRef<"Constituent", 'Boolean'>
+    readonly createdAt: FieldRef<"Constituent", 'DateTime'>
+    readonly updatedAt: FieldRef<"Constituent", 'DateTime'>
   }
     
 
@@ -2886,7 +2922,10 @@ export namespace Prisma {
     firstName: 'firstName',
     lastName: 'lastName',
     email: 'email',
-    phone: 'phone'
+    phone: 'phone',
+    subscribed: 'subscribed',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
   };
 
   export type ConstituentScalarFieldEnum = (typeof ConstituentScalarFieldEnum)[keyof typeof ConstituentScalarFieldEnum]
@@ -2935,6 +2974,20 @@ export namespace Prisma {
 
 
   /**
+   * Reference to a field of type 'Boolean'
+   */
+  export type BooleanFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Boolean'>
+    
+
+
+  /**
+   * Reference to a field of type 'DateTime'
+   */
+  export type DateTimeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'DateTime'>
+    
+
+
+  /**
    * Reference to a field of type 'Int'
    */
   export type IntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Int'>
@@ -2953,6 +3006,9 @@ export namespace Prisma {
     lastName?: StringFilter<"Constituent"> | string
     email?: StringFilter<"Constituent"> | string
     phone?: StringNullableFilter<"Constituent"> | string | null
+    subscribed?: BoolFilter<"Constituent"> | boolean
+    createdAt?: DateTimeFilter<"Constituent"> | Date | string
+    updatedAt?: DateTimeFilter<"Constituent"> | Date | string
     constituentAddress?: XOR<ConstituentAddressNullableRelationFilter, ConstituentAddressWhereInput> | null
   }
 
@@ -2962,6 +3018,9 @@ export namespace Prisma {
     lastName?: SortOrder
     email?: SortOrder
     phone?: SortOrderInput | SortOrder
+    subscribed?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
     constituentAddress?: ConstituentAddressOrderByWithRelationInput
   }
 
@@ -2974,6 +3033,9 @@ export namespace Prisma {
     firstName?: StringFilter<"Constituent"> | string
     lastName?: StringFilter<"Constituent"> | string
     phone?: StringNullableFilter<"Constituent"> | string | null
+    subscribed?: BoolFilter<"Constituent"> | boolean
+    createdAt?: DateTimeFilter<"Constituent"> | Date | string
+    updatedAt?: DateTimeFilter<"Constituent"> | Date | string
     constituentAddress?: XOR<ConstituentAddressNullableRelationFilter, ConstituentAddressWhereInput> | null
   }, "id" | "email">
 
@@ -2983,6 +3045,9 @@ export namespace Prisma {
     lastName?: SortOrder
     email?: SortOrder
     phone?: SortOrderInput | SortOrder
+    subscribed?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
     _count?: ConstituentCountOrderByAggregateInput
     _max?: ConstituentMaxOrderByAggregateInput
     _min?: ConstituentMinOrderByAggregateInput
@@ -2997,6 +3062,9 @@ export namespace Prisma {
     lastName?: StringWithAggregatesFilter<"Constituent"> | string
     email?: StringWithAggregatesFilter<"Constituent"> | string
     phone?: StringNullableWithAggregatesFilter<"Constituent"> | string | null
+    subscribed?: BoolWithAggregatesFilter<"Constituent"> | boolean
+    createdAt?: DateTimeWithAggregatesFilter<"Constituent"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"Constituent"> | Date | string
   }
 
   export type ConstituentAddressWhereInput = {
@@ -3075,6 +3143,9 @@ export namespace Prisma {
     lastName: string
     email: string
     phone?: string | null
+    subscribed?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
     constituentAddress?: ConstituentAddressCreateNestedOneWithoutConstituentInput
   }
 
@@ -3084,6 +3155,9 @@ export namespace Prisma {
     lastName: string
     email: string
     phone?: string | null
+    subscribed?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
     constituentAddress?: ConstituentAddressUncheckedCreateNestedOneWithoutConstituentInput
   }
 
@@ -3093,6 +3167,9 @@ export namespace Prisma {
     lastName?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     phone?: NullableStringFieldUpdateOperationsInput | string | null
+    subscribed?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     constituentAddress?: ConstituentAddressUpdateOneWithoutConstituentNestedInput
   }
 
@@ -3102,6 +3179,9 @@ export namespace Prisma {
     lastName?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     phone?: NullableStringFieldUpdateOperationsInput | string | null
+    subscribed?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     constituentAddress?: ConstituentAddressUncheckedUpdateOneWithoutConstituentNestedInput
   }
 
@@ -3111,6 +3191,9 @@ export namespace Prisma {
     lastName: string
     email: string
     phone?: string | null
+    subscribed?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
   }
 
   export type ConstituentUpdateManyMutationInput = {
@@ -3119,6 +3202,9 @@ export namespace Prisma {
     lastName?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     phone?: NullableStringFieldUpdateOperationsInput | string | null
+    subscribed?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type ConstituentUncheckedUpdateManyInput = {
@@ -3127,6 +3213,9 @@ export namespace Prisma {
     lastName?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     phone?: NullableStringFieldUpdateOperationsInput | string | null
+    subscribed?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type ConstituentAddressCreateInput = {
@@ -3233,6 +3322,22 @@ export namespace Prisma {
     not?: NestedStringNullableFilter<$PrismaModel> | string | null
   }
 
+  export type BoolFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
+    not?: NestedBoolFilter<$PrismaModel> | boolean
+  }
+
+  export type DateTimeFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    in?: Date[] | string[]
+    notIn?: Date[] | string[]
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeFilter<$PrismaModel> | Date | string
+  }
+
   export type ConstituentAddressNullableRelationFilter = {
     is?: ConstituentAddressWhereInput | null
     isNot?: ConstituentAddressWhereInput | null
@@ -3249,6 +3354,9 @@ export namespace Prisma {
     lastName?: SortOrder
     email?: SortOrder
     phone?: SortOrder
+    subscribed?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
   }
 
   export type ConstituentMaxOrderByAggregateInput = {
@@ -3257,6 +3365,9 @@ export namespace Prisma {
     lastName?: SortOrder
     email?: SortOrder
     phone?: SortOrder
+    subscribed?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
   }
 
   export type ConstituentMinOrderByAggregateInput = {
@@ -3265,6 +3376,9 @@ export namespace Prisma {
     lastName?: SortOrder
     email?: SortOrder
     phone?: SortOrder
+    subscribed?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
   }
 
   export type StringWithAggregatesFilter<$PrismaModel = never> = {
@@ -3299,6 +3413,28 @@ export namespace Prisma {
     _count?: NestedIntNullableFilter<$PrismaModel>
     _min?: NestedStringNullableFilter<$PrismaModel>
     _max?: NestedStringNullableFilter<$PrismaModel>
+  }
+
+  export type BoolWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
+    not?: NestedBoolWithAggregatesFilter<$PrismaModel> | boolean
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedBoolFilter<$PrismaModel>
+    _max?: NestedBoolFilter<$PrismaModel>
+  }
+
+  export type DateTimeWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    in?: Date[] | string[]
+    notIn?: Date[] | string[]
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeWithAggregatesFilter<$PrismaModel> | Date | string
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedDateTimeFilter<$PrismaModel>
+    _max?: NestedDateTimeFilter<$PrismaModel>
   }
 
   export type ConstituentRelationFilter = {
@@ -3357,6 +3493,14 @@ export namespace Prisma {
 
   export type NullableStringFieldUpdateOperationsInput = {
     set?: string | null
+  }
+
+  export type BoolFieldUpdateOperationsInput = {
+    set?: boolean
+  }
+
+  export type DateTimeFieldUpdateOperationsInput = {
+    set?: Date | string
   }
 
   export type ConstituentAddressUpdateOneWithoutConstituentNestedInput = {
@@ -3421,6 +3565,22 @@ export namespace Prisma {
     not?: NestedStringNullableFilter<$PrismaModel> | string | null
   }
 
+  export type NestedBoolFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
+    not?: NestedBoolFilter<$PrismaModel> | boolean
+  }
+
+  export type NestedDateTimeFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    in?: Date[] | string[]
+    notIn?: Date[] | string[]
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeFilter<$PrismaModel> | Date | string
+  }
+
   export type NestedStringWithAggregatesFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel>
     in?: string[]
@@ -3475,6 +3635,28 @@ export namespace Prisma {
     gt?: number | IntFieldRefInput<$PrismaModel>
     gte?: number | IntFieldRefInput<$PrismaModel>
     not?: NestedIntNullableFilter<$PrismaModel> | number | null
+  }
+
+  export type NestedBoolWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
+    not?: NestedBoolWithAggregatesFilter<$PrismaModel> | boolean
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedBoolFilter<$PrismaModel>
+    _max?: NestedBoolFilter<$PrismaModel>
+  }
+
+  export type NestedDateTimeWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    in?: Date[] | string[]
+    notIn?: Date[] | string[]
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeWithAggregatesFilter<$PrismaModel> | Date | string
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedDateTimeFilter<$PrismaModel>
+    _max?: NestedDateTimeFilter<$PrismaModel>
   }
 
   export type ConstituentAddressCreateWithoutConstituentInput = {
@@ -3539,6 +3721,9 @@ export namespace Prisma {
     lastName: string
     email: string
     phone?: string | null
+    subscribed?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
   }
 
   export type ConstituentUncheckedCreateWithoutConstituentAddressInput = {
@@ -3547,6 +3732,9 @@ export namespace Prisma {
     lastName: string
     email: string
     phone?: string | null
+    subscribed?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
   }
 
   export type ConstituentCreateOrConnectWithoutConstituentAddressInput = {
@@ -3571,6 +3759,9 @@ export namespace Prisma {
     lastName?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     phone?: NullableStringFieldUpdateOperationsInput | string | null
+    subscribed?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type ConstituentUncheckedUpdateWithoutConstituentAddressInput = {
@@ -3579,6 +3770,9 @@ export namespace Prisma {
     lastName?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     phone?: NullableStringFieldUpdateOperationsInput | string | null
+    subscribed?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
 
