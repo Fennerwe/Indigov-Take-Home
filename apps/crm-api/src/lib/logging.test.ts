@@ -1,4 +1,4 @@
-import {LogType, structuredLog} from './logging'
+import { LogType, structuredLog } from './logging'
 
 describe('logging', () => {
     describe('structuredLog', () => {
@@ -19,16 +19,21 @@ describe('logging', () => {
             const testMetadata = {
                 val1: 'val1',
                 val2: true,
-                val3: 100
+                val3: 100,
             }
             structuredLog({
                 tag: testTag,
                 type: testType,
                 message: testMessage,
-                metadata: testMetadata
+                metadata: testMetadata,
             })
 
-            expect(logSpy).toHaveBeenCalledWith({tag: testTag, type: testType, message: testMessage, metadata: testMetadata})
+            expect(logSpy).toHaveBeenCalledWith({
+                tag: testTag,
+                type: testType,
+                message: testMessage,
+                metadata: testMetadata,
+            })
         })
     })
 })

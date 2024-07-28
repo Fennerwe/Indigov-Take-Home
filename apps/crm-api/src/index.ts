@@ -21,8 +21,8 @@ async function start() {
             message: 'Incoming request',
             metadata: {
                 path: req.url,
-                body: req.body
-            }
+                body: req.body,
+            },
         })
         next()
     })
