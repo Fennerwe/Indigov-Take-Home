@@ -24,6 +24,7 @@ async function start() {
                 body: req.body
             }
         })
+        next()
     })
 
     new HealthController(app)
