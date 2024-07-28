@@ -83,34 +83,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fennerwe-indigov/crm-api-sdk@workspace:^, @fennerwe-indigov/crm-api-sdk@workspace:packages/crm-api-sdk":
-  version: 0.0.0-use.local
-  resolution: "@fennerwe-indigov/crm-api-sdk@workspace:packages/crm-api-sdk"
-  dependencies:
-    "@types/eslint": "npm:^9"
-    eslint: "npm:9.x"
-    globals: "npm:^15.8.0"
-    prettier: "npm:^3.3.3"
-    typescript: "npm:^5.5.4"
-    typescript-eslint: "npm:^7.17.0"
-  languageName: unknown
-  linkType: soft
-
 "@fennerwe-indigov/crm-api@workspace:apps/crm-api":
   version: 0.0.0-use.local
   resolution: "@fennerwe-indigov/crm-api@workspace:apps/crm-api"
   dependencies:
-    "@fennerwe-indigov/crm-api-sdk": "workspace:^"
     "@fennerwe-indigov/crm-models": "workspace:^"
     "@types/eslint": "npm:^9"
     "@types/express": "npm:^4.17.21"
     eslint: "npm:9.x"
     express: "npm:^4.19.2"
+    express-async-errors: "npm:^3.1.1"
     globals: "npm:^15.8.0"
     nodemon: "npm:^3.1.4"
+    prettier: "npm:^3.3.3"
     ts-node: "npm:^10.9.2"
     typescript: "npm:^5.5.4"
     typescript-eslint: "npm:^7.17.0"
+    zod: "npm:^3.23.8"
   languageName: unknown
   linkType: soft
 
@@ -1542,6 +1531,15 @@ __metadata:
   version: 3.1.1
   resolution: "exponential-backoff@npm:3.1.1"
   checksum: 10c0/160456d2d647e6019640bd07111634d8c353038d9fa40176afb7cd49b0548bdae83b56d05e907c2cce2300b81cae35d800ef92fefb9d0208e190fa3b7d6bb579
+  languageName: node
+  linkType: hard
+
+"express-async-errors@npm:^3.1.1":
+  version: 3.1.1
+  resolution: "express-async-errors@npm:3.1.1"
+  peerDependencies:
+    express: ^4.16.2
+  checksum: 10c0/56c4e90c44e98c7edc5bd38e18dd23b0d9a7139cb94ff3e25943ba257415b433e0e52ea8f9bc1fb5b70a5e6c5246eaace4fb69ab171edfb8896580928bb97ec6
   languageName: node
   linkType: hard
 
@@ -3486,5 +3484,12 @@ __metadata:
   version: 0.1.0
   resolution: "yocto-queue@npm:0.1.0"
   checksum: 10c0/dceb44c28578b31641e13695d200d34ec4ab3966a5729814d5445b194933c096b7ced71494ce53a0e8820685d1d010df8b2422e5bf2cdea7e469d97ffbea306f
+  languageName: node
+  linkType: hard
+
+"zod@npm:^3.23.8":
+  version: 3.23.8
+  resolution: "zod@npm:3.23.8"
+  checksum: 10c0/8f14c87d6b1b53c944c25ce7a28616896319d95bc46a9660fe441adc0ed0a81253b02b5abdaeffedbeb23bdd25a0bf1c29d2c12dd919aef6447652dd295e3e69
   languageName: node
   linkType: hard
