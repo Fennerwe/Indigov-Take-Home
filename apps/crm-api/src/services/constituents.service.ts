@@ -49,7 +49,7 @@ class ConstituentService {
             where: {
                 id,
             },
-            data: constituentData,
+            data: {...constituentData, updatedAt: new Date()},
         })
     }
 
@@ -61,7 +61,10 @@ class ConstituentService {
             where: {
                 constituentId,
             },
-            data: address,
+            data: {
+                ...address,
+                updatedAt: new Date()
+            },
         })
     }
 
