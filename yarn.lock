@@ -1558,6 +1558,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@faker-js/faker@npm:^8.4.1":
+  version: 8.4.1
+  resolution: "@faker-js/faker@npm:8.4.1"
+  checksum: 10c0/4f2aecddcfdc2cc8b50b2d15d1e37302a7c7a5bbd184ae910a9d271bc11248533ca74dcdd4a9ccbe20410553e7af0f6a4d334c5b955635e09a32ddf4a64942d4
+  languageName: node
+  linkType: hard
+
 "@fennerwe-indigov/crm-api@workspace:apps/crm-api":
   version: 0.0.0-use.local
   resolution: "@fennerwe-indigov/crm-api@workspace:apps/crm-api"
@@ -1592,10 +1599,14 @@ __metadata:
   resolution: "@fennerwe-indigov/crm-models@workspace:packages/crm-models"
   dependencies:
     "@eslint/js": "npm:^9.8.0"
+    "@faker-js/faker": "npm:^8.4.1"
     "@prisma/client": "npm:5.17.0"
+    "@types/argparse": "npm:^2"
     "@types/eslint": "npm:^9"
-    "@types/node": "npm:^20.14.12"
+    "@types/node": "npm:^22.0.0"
     "@yarnpkg/pnpify": "npm:^4.1.0"
+    argparse: "npm:^2.0.1"
+    date-fns: "npm:^3.6.0"
     eslint: "npm:9.x"
     globals: "npm:^15.8.0"
     prettier: "npm:^3.3.3"
@@ -2414,6 +2425,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/argparse@npm:^2":
+  version: 2.0.16
+  resolution: "@types/argparse@npm:2.0.16"
+  checksum: 10c0/f7e277b102d21a48b93051309951ba710545815fe5b67f8d67be352ee8dcc8e584b51b5fe93fcd58cbf3240404087652dff5134809756c77f53cc238c7c1ffd4
+  languageName: node
+  linkType: hard
+
 "@types/babel__core@npm:^7, @types/babel__core@npm:^7.1.14":
   version: 7.20.5
   resolution: "@types/babel__core@npm:7.20.5"
@@ -2622,7 +2640,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^20.14.12":
+"@types/node@npm:*":
   version: 20.14.12
   resolution: "@types/node@npm:20.14.12"
   dependencies:
@@ -3890,6 +3908,13 @@ __metadata:
     shebang-command: "npm:^2.0.0"
     which: "npm:^2.0.1"
   checksum: 10c0/5738c312387081c98d69c98e105b6327b069197f864a60593245d64c8089c8a0a744e16349281210d56835bb9274130d825a78b2ad6853ca13cfbeffc0c31750
+  languageName: node
+  linkType: hard
+
+"date-fns@npm:^3.6.0":
+  version: 3.6.0
+  resolution: "date-fns@npm:3.6.0"
+  checksum: 10c0/0b5fb981590ef2f8e5a3ba6cd6d77faece0ea7f7158948f2eaae7bbb7c80a8f63ae30b01236c2923cf89bb3719c33aeb150c715ea4fe4e86e37dcf06bed42fb6
   languageName: node
   linkType: hard
 

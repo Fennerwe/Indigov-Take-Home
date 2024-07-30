@@ -32,3 +32,4 @@ The following endpoints are available:
 - GET '/constituents': Returns a list of all constituents
 - GET '/constituents/export': Takes a start and end date as query parameters in the format 'YYYY-MM-DD' and returns a CSV file of all of the constituents who were created between those dates.
     - Example request: `localhost:3000/constituents/export?startDate=2024-07-20&endDate=2024-07-30`
+    - There appears to be a bug with sorting the constituents by their signup date (created_at column). I think it has to do with how Prisma and sqlite are working together and handle datetimes
